@@ -2,9 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Logo } from "../ui/logo";
 import { cn } from "@/utils/misc";
 import { buttonVariants } from "@/ui/button-util";
-import { Loader2, Star } from "lucide-react";
-import { Button } from "@/ui/button";
-import siteConfig from "~/site.config";
+import { Loader2, Star as _Star } from "lucide-react";
+import { Button as _Button } from "@/ui/button";
+import _siteConfig from "~/site.config";
 import { ThemeSwitcherHome } from "@/ui/theme-switcher";
 import ShadowPNG from "/images/shadow.png";
 import { useConvexAuth } from "@convex-dev/react-query";
@@ -62,7 +62,7 @@ function Index() {
         <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-4 p-12 md:p-24">
 
           <h1 className="text-center text-6xl font-bold leading-tight text-primary md:text-7xl lg:leading-tight">
-            Into the PiggyBerse
+            Into the PiggyVerse
           </h1>
           <p className="max-w-screen-md text-center text-lg !leading-normal text-muted-foreground md:text-xl">
             
@@ -499,33 +499,6 @@ function Index() {
         <ThemeSwitcherHome />
 
         <div className="flex flex-col items-center gap-2 sm:flex-row">
-          <p className="flex items-center whitespace-nowrap text-center text-sm font-medium text-primary/60">
-            Based on&nbsp;
-            <a
-              href="https://remix-saas.fly.dev"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center text-primary hover:text-primary hover:underline"
-            >
-              the Open-Source Remix SaaS by&nbsp;
-            </a>
-            <p className="flex items-center whitespace-nowrap text-center text-sm font-medium text-primary/60">
-              <a href="https://bento.me/danielkanem?utm_source=remixconvexsaas">
-                DanielKanem.
-              </a>
-            </p>
-          </p>
-          <p className="flex items-center whitespace-nowrap text-center text-sm font-medium text-primary/60">
-            Source code available on&nbsp;{" "}
-            <a
-              href="https://github.com/get-convex/convex-saas"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center text-primary hover:text-primary hover:underline"
-            >
-              GitHub.
-            </a>
-          </p>
         </div>
       </footer>
 

@@ -20,7 +20,16 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
       "@typescript-eslint/no-empty-interface": "off",
-      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "varsIgnorePattern": "^_",
+          "argsIgnorePattern": "^_",
+          "ignoreRestSiblings": true,
+          "destructuredArrayIgnorePattern": "^_"
+        }
+      ],
+      "@typescript-eslint/no-unused-imports": "off",
       "@typescript-eslint/consistent-type-definitions": "off",
     },
   },

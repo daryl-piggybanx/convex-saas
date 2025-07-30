@@ -3,6 +3,7 @@ import {
   createRootRouteWithContext,
   Outlet,
   useRouter,
+  useRouteContext,
 } from "@tanstack/react-router";
 import React, { Suspense } from "react";
 import { Helmet } from "react-helmet-async";
@@ -24,10 +25,10 @@ export const Route = createRootRouteWithContext<{
 }>()({
   component: () => {
     const router = useRouter();
-    const matchWithTitle = [...router.state.matches]
-      .reverse()
-      .find((d) => d.routeContext?.title);
-    const title = matchWithTitle?.routeContext.title || "Convex SaaS";
+    const routeContext = useRouteContext({
+      from: router.state.matches.slice(-1)[0]?.id,
+    });
+    const title = routeContext?.title || "Convex SaaS";
 
     return (
       <>
