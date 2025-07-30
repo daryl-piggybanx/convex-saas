@@ -38,51 +38,9 @@ function Index() {
             >
               Docs
             </a>
-            <a
-              href="https://github.com/get-convex/convex-saas"
-              target="_blank"
-              rel="noreferrer"
-              className={cn(
-                buttonVariants({ variant: "link", size: "sm" }),
-                "group flex gap-3 px-0 text-primary/80 hover:text-primary hover:no-underline",
-              )}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-primary/80"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-              </svg>
-              <span className="hidden select-none items-center gap-1 rounded-full bg-green-500/5 px-2 py-1 pr-2.5 text-xs font-medium tracking-tight text-green-600 ring-1 ring-inset ring-green-600/20 backdrop-blur-sm dark:bg-yellow-800/40 dark:text-yellow-100 dark:ring-yellow-200/50 md:flex">
-                <Star
-                  className="h-3 w-3 text-green-600 dark:text-yellow-100"
-                  fill="currentColor"
-                />
-                Star Us on GitHub
-              </span>
-            </a>
+
           </div>
-          <a
-            href="https://twitter.com/convex_dev"
-            target="_blank"
-            rel="noreferrer"
-            className="flex h-9 w-9 items-center justify-center"
-          >
-            <svg
-              className="h-[18px] w-[18px] text-primary"
-              strokeLinejoin="round"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M0.5 0.5H5.75L9.48421 5.71053L14 0.5H16L10.3895 6.97368L16.5 15.5H11.25L7.51579 10.2895L3 15.5H1L6.61053 9.02632L0.5 0.5ZM12.0204 14L3.42043 2H4.97957L13.5796 14H12.0204Z"
-                fill="currentColor"
-              />
-            </svg>
-          </a>
+
           <Link
             to={
               isAuthenticated
@@ -102,41 +60,12 @@ function Index() {
       {/* Content */}
       <div className="z-10 mx-auto flex w-full max-w-screen-lg flex-col gap-4 px-6">
         <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-4 p-12 md:p-24">
-          <Button
-            variant="outline"
-            className={cn(
-              "hidden h-8 rounded-full bg-white/40 px-3 text-sm font-bold backdrop-blur hover:text-primary dark:bg-secondary md:flex",
-            )}
-          >
-            <span className="flex items-center font-medium text-primary/60">
-              Introducing
-              <svg
-                className="mx-1 h-[14px] w-[14px] text-primary"
-                strokeLinejoin="round"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M0.5 0.5H5.75L9.48421 5.71053L14 0.5H16L10.3895 6.97368L16.5 15.5H11.25L7.51579 10.2895L3 15.5H1L6.61053 9.02632L0.5 0.5ZM12.0204 14L3.42043 2H4.97957L13.5796 14H12.0204Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-            {siteConfig.siteTitle}
-          </Button>
+
           <h1 className="text-center text-6xl font-bold leading-tight text-primary md:text-7xl lg:leading-tight">
-            Production Ready
-            <br />
-            SaaS Stack for Convex
+            Into the PiggyBerse
           </h1>
           <p className="max-w-screen-md text-center text-lg !leading-normal text-muted-foreground md:text-xl">
-            Launch in hours with a modern{" "}
-            <span className="font-medium text-primary">
-              Production-Ready Stack
-            </span>
-            <br className="hidden lg:inline-block" /> Stripe integration.
-            TanStack-powered. Open Source.
+            
           </p>
           <div className="mt-2 flex w-full items-center justify-center gap-2">
             <Link
@@ -154,13 +83,13 @@ function Index() {
                 "hidden dark:bg-secondary dark:hover:opacity-80 sm:flex",
               )}
             >
-              Explore Documentation
+              Explore
             </a>
           </div>
         </div>
         <div className="flex w-full flex-col items-center justify-center gap-2">
           <h2 className="text-center font-serif text-xl font-medium text-primary/60">
-            Built for Developers
+            Built for Collectors by Collectors
           </h2>
           <div className="my-8 flex flex-wrap items-center justify-center gap-10 gap-y-8 lg:gap-14">
             <a
@@ -542,32 +471,7 @@ function Index() {
             <span className="absolute h-[1px] w-6 bg-primary/40" />
           </div>
         </div>
-        <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-6 p-12">
-          <h1 className="text-center text-4xl font-bold leading-tight text-primary md:text-6xl">
-            Proudly Open Source
-          </h1>
-          <p className="text-center text-lg text-primary/60">
-            Convex SaaS is a fully Open Source project.
-            <br />
-            The code is available on GitHub.
-          </p>
-          <a
-            href="https://github.com/get-convex/convex-saas"
-            target="_blank"
-            rel="noreferrer"
-            className="hidden h-10 select-none items-center gap-2 rounded-full bg-green-500/5 px-2 py-1 pr-2.5 text-base font-medium tracking-tight text-green-600 ring-1 ring-inset ring-green-600/20 backdrop-blur-sm dark:bg-yellow-800/40 dark:text-yellow-100 dark:ring-yellow-200/50 md:flex"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-green-600 dark:text-yellow-100"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-            </svg>
-            Star Us on GitHub
-          </a>
-        </div>
+
       </div>
 
       {/* Footer */}
