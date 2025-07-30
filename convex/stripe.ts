@@ -9,7 +9,7 @@ import { v } from "convex/values";
 import { ERRORS } from "~/errors";
 import { auth } from "@cvx/auth";
 import { currencyValidator, intervalValidator, PLANS } from "@cvx/schema";
-import { api, internal } from "~/convex/_generated/api";
+import { api, internal } from "@cvx/_generated/api";
 import { SITE_URL, STRIPE_SECRET_KEY } from "@cvx/env";
 import { asyncMap } from "convex-helpers";
 
@@ -87,6 +87,7 @@ export const PREAUTH_createStripeCustomer = internalAction({
 });
 
 export const UNAUTH_getDefaultPlan = internalQuery({
+  args: {},
   handler: async (ctx) => {
     return ctx.db
       .query("plans")

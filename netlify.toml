@@ -4,4 +4,4 @@
   status = 200
 
 [context.production]
-  command = "npx convex deploy --cmd 'npm run build'"
+  command = "pnpx convex deploy --cmd 'pnpm build'"
