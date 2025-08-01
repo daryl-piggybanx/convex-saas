@@ -3,7 +3,7 @@ import { leaderboardData } from "@/lib/data"
 
 export function LeaderboardPreview() {
   return (
-    <Card className="border-pipboy-green/20 bg-black/30">
+    <Card className="border-pipboy-green/20 bg-black/30 w-full">
       <CardHeader>
         <CardTitle className="uppercase text-glow">Leaderboard</CardTitle>
       </CardHeader>

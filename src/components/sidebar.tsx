@@ -69,16 +69,6 @@ export default function Sidebar({ user }: { user: User }) {
         })}
       </nav>
       <CtaSection />
-      <nav className="flex flex-col gap-2">
-        <Link to={SettingsRoute.fullPath} className="flex items-center gap-3 rounded-none p-2 text-pipboy-green transition-colors hover:bg-pipboy-green/10 hover:text-glow">
-          <Settings className="h-6 w-6 flex-shrink-0" />
-          <span className="hidden sm:inline">Settings</span>
-        </Link>
-        <Link to={BillingSettingsRoute.fullPath} className="flex items-center gap-3 rounded-none p-2 text-pipboy-green transition-colors hover:bg-pipboy-green/10 hover:text-glow">
-          <CreditCard className="h-6 w-6 flex-shrink-0" />
-          <span className="hidden sm:inline">Billing</span>
-        </Link>
-      </nav>
     </aside >
   )
 }

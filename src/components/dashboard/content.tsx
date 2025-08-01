@@ -4,7 +4,6 @@ import { LeaderboardPreview } from "@/components/leaderboard/preview"
 import { WeeklyCalendar } from "@/components/calendar/weekly-calendar"
 import { Chatbot } from "@/components/chatbot/bot"
 import { TrophyRoomPreview } from "@/components/trophy-room/preview"
-import SettingsWidget from "../widgets/settings"
 
 const StatusIndicator = ({
   label,
@@ -30,15 +29,6 @@ const StatusIndicator = ({
 
 export default function DashboardContent() {
   return (
-    <div className="flex flex-col gap-4 text-lg text-pipboy-green">
-      <header className="flex items-center justify-between">
-        <div>
-          <h1 className="text-4xl uppercase text-glow">Piggy Command</h1>
-          <p className="text-pipboy-green/70">Welcome back, Collector.</p>
-        </div>
-        <SettingsWidget />
-      </header>
-      <Separator className="bg-pipboy-green/20" />
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-5">
         <div className="flex flex-col gap-4 lg:col-span-2">
@@ -50,6 +40,6 @@ export default function DashboardContent() {
           <TrophyRoomPreview />
         </div>
       </div>
-    </div>
+
   )
 }
