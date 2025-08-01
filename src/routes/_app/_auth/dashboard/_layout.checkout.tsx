@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Loader2, BadgeCheck, AlertTriangle, ExternalLink } from "lucide-react";
-import { buttonVariants } from "@/ui/button-util";
+import { buttonVariants } from "@components/button-util";
 import { useEffect, useState } from "react";
 import { Route as DashboardRoute } from "@/routes/_app/_auth/dashboard/_layout.index";
 import siteConfig from "~/site.config";
@@ -36,9 +36,9 @@ export default function DashboardCheckout() {
   }
 
   return (
-    <div className="flex h-full w-full bg-secondary px-6 py-8 dark:bg-black">
+    <div className="flex h-full w-full bg-secondary px-6 py-8 bg-space-dark">
       <div className="z-10 mx-auto flex h-full w-full max-w-screen-xl gap-12">
-        <div className="flex w-full flex-col rounded-lg border border-border bg-card dark:bg-black">
+        <div className="flex w-full flex-col rounded-lg border border-border bg-card bg-space-dark">
           <div className="flex w-full flex-col rounded-lg p-6">
             <div className="flex flex-col gap-2">
               <h2 className="text-xl font-medium text-primary">

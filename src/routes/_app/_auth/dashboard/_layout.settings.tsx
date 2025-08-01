@@ -4,8 +4,8 @@ import {
   Outlet,
   useMatchRoute,
 } from "@tanstack/react-router";
-import { cn } from "@/utils/misc";
-import { buttonVariants } from "@/ui/button-util";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@components/button-util";
 import { Route as SettingsRoute } from "@/routes/_app/_auth/dashboard/_layout.settings.index";
 import { Route as BillingSettingsRoute } from "@/routes/_app/_auth/dashboard/_layout.settings.billing";
 

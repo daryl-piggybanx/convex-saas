@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Upload } from "lucide-react";
 import { useUploadFiles } from "@xixixao/uploadstuff/react";
-import { useDoubleCheck } from "@/ui/use-double-check";
-import { Input } from "@/ui/input";
-import { Button } from "@/ui/button";
+import { useDoubleCheck } from "@components/use-double-check";
+import { Input } from "@components/input";
+import { Button } from "@components/button";
 import { convexQuery, useConvexMutation } from "@convex-dev/react-query";
 import { api } from "~/convex/_generated/api";
 import { useMutation, useQuery } from "@tanstack/react-query";

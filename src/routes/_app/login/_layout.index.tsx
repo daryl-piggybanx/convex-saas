@@ -2,8 +2,8 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useAuthActions } from "@convex-dev/auth/react";
 import { z } from "zod";
 import { Loader2 } from "lucide-react";
-import { Input } from "@/ui/input";
-import { Button } from "@/ui/button";
+import { Input } from "@/components/input";
+import { Button } from "@/components/button";
 import { useForm } from "@tanstack/react-form";
 import { zodValidator } from "@tanstack/zod-form-adapter";
 import { useEffect, useState } from "react";
@@ -62,7 +62,7 @@ function LoginForm({ onSubmit }: { onSubmit: (email: string) => void }) {
     <div className="mx-auto flex h-full w-full max-w-96 flex-col items-center justify-center gap-6">
       <div className="mb-2 flex flex-col gap-2">
         <h3 className="text-center text-2xl font-medium text-primary">
-          Continue to Convex SaaS
+          Continue to Piggy Command
         </h3>
         <p className="text-center text-base font-normal text-primary/60">
           Welcome back! Please log in to continue.

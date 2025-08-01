@@ -1,6 +1,6 @@
 import { Sun, Moon, Monitor } from "lucide-react";
-import { cn } from "@/utils/misc";
-import { Select, SelectContent, SelectItem, SelectTrigger } from "@/ui/select";
+import { cn } from "@/lib/utils";
+import { Select, SelectContent, SelectItem, SelectTrigger } from "@components/select";
 import { useEffect, useState } from "react";
 
 const themes = ["light", "dark", "system"] as const;

@@ -20,8 +20,11 @@ import { Route as AppAuthOnboardingLayoutRouteImport } from './routes/_app/_auth
 import { Route as AppAuthDashboardLayoutRouteImport } from './routes/_app/_auth/dashboard/_layout'
 import { Route as AppAuthDashboardLayoutIndexRouteImport } from './routes/_app/_auth/dashboard/_layout.index'
 import { Route as AppAuthOnboardingLayoutUsernameRouteImport } from './routes/_app/_auth/onboarding/_layout.username'
+import { Route as AppAuthDashboardLayoutTrophyRoomRouteImport } from './routes/_app/_auth/dashboard/_layout.trophy-room'
 import { Route as AppAuthDashboardLayoutSettingsRouteImport } from './routes/_app/_auth/dashboard/_layout.settings'
+import { Route as AppAuthDashboardLayoutLeaderboardRouteImport } from './routes/_app/_auth/dashboard/_layout.leaderboard'
 import { Route as AppAuthDashboardLayoutCheckoutRouteImport } from './routes/_app/_auth/dashboard/_layout.checkout'
+import { Route as AppAuthDashboardLayoutChatLogsRouteImport } from './routes/_app/_auth/dashboard/_layout.chat-logs'
 import { Route as AppAuthDashboardLayoutSettingsIndexRouteImport } from './routes/_app/_auth/dashboard/_layout.settings.index'
 import { Route as AppAuthDashboardLayoutSettingsBillingRouteImport } from './routes/_app/_auth/dashboard/_layout.settings.billing'
 
@@ -86,16 +89,34 @@ const AppAuthOnboardingLayoutUsernameRoute =
     path: '/username',
     getParentRoute: () => AppAuthOnboardingLayoutRoute,
   } as any)
+const AppAuthDashboardLayoutTrophyRoomRoute =
+  AppAuthDashboardLayoutTrophyRoomRouteImport.update({
+    id: '/trophy-room',
+    path: '/trophy-room',
+    getParentRoute: () => AppAuthDashboardLayoutRoute,
+  } as any)
 const AppAuthDashboardLayoutSettingsRoute =
   AppAuthDashboardLayoutSettingsRouteImport.update({
     id: '/settings',
     path: '/settings',
     getParentRoute: () => AppAuthDashboardLayoutRoute,
   } as any)
+const AppAuthDashboardLayoutLeaderboardRoute =
+  AppAuthDashboardLayoutLeaderboardRouteImport.update({
+    id: '/leaderboard',
+    path: '/leaderboard',
+    getParentRoute: () => AppAuthDashboardLayoutRoute,
+  } as any)
 const AppAuthDashboardLayoutCheckoutRoute =
   AppAuthDashboardLayoutCheckoutRouteImport.update({
     id: '/checkout',
     path: '/checkout',
+    getParentRoute: () => AppAuthDashboardLayoutRoute,
+  } as any)
+const AppAuthDashboardLayoutChatLogsRoute =
+  AppAuthDashboardLayoutChatLogsRouteImport.update({
+    id: '/chat-logs',
+    path: '/chat-logs',
     getParentRoute: () => AppAuthDashboardLayoutRoute,
   } as any)
 const AppAuthDashboardLayoutSettingsIndexRoute =
@@ -117,8 +138,11 @@ export interface FileRoutesByFullPath {
   '/dashboard': typeof AppAuthDashboardLayoutRouteWithChildren
   '/onboarding': typeof AppAuthOnboardingLayoutRouteWithChildren
   '/login/': typeof AppLoginLayoutIndexRoute
+  '/dashboard/chat-logs': typeof AppAuthDashboardLayoutChatLogsRoute
   '/dashboard/checkout': typeof AppAuthDashboardLayoutCheckoutRoute
+  '/dashboard/leaderboard': typeof AppAuthDashboardLayoutLeaderboardRoute
   '/dashboard/settings': typeof AppAuthDashboardLayoutSettingsRouteWithChildren
+  '/dashboard/trophy-room': typeof AppAuthDashboardLayoutTrophyRoomRoute
   '/onboarding/username': typeof AppAuthOnboardingLayoutUsernameRoute
   '/dashboard/': typeof AppAuthDashboardLayoutIndexRoute
   '/dashboard/settings/billing': typeof AppAuthDashboardLayoutSettingsBillingRoute
@@ -129,7 +153,10 @@ export interface FileRoutesByTo {
   '/login': typeof AppLoginLayoutIndexRoute
   '/dashboard': typeof AppAuthDashboardLayoutIndexRoute
   '/onboarding': typeof AppAuthOnboardingLayoutRouteWithChildren
+  '/dashboard/chat-logs': typeof AppAuthDashboardLayoutChatLogsRoute
   '/dashboard/checkout': typeof AppAuthDashboardLayoutCheckoutRoute
+  '/dashboard/leaderboard': typeof AppAuthDashboardLayoutLeaderboardRoute
+  '/dashboard/trophy-room': typeof AppAuthDashboardLayoutTrophyRoomRoute
   '/onboarding/username': typeof AppAuthOnboardingLayoutUsernameRoute
   '/dashboard/settings/billing': typeof AppAuthDashboardLayoutSettingsBillingRoute
   '/dashboard/settings': typeof AppAuthDashboardLayoutSettingsIndexRoute
@@ -146,8 +173,11 @@ export interface FileRoutesById {
   '/_app/_auth/onboarding': typeof AppAuthOnboardingRouteWithChildren
   '/_app/_auth/onboarding/_layout': typeof AppAuthOnboardingLayoutRouteWithChildren
   '/_app/login/_layout/': typeof AppLoginLayoutIndexRoute
+  '/_app/_auth/dashboard/_layout/chat-logs': typeof AppAuthDashboardLayoutChatLogsRoute
   '/_app/_auth/dashboard/_layout/checkout': typeof AppAuthDashboardLayoutCheckoutRoute
+  '/_app/_auth/dashboard/_layout/leaderboard': typeof AppAuthDashboardLayoutLeaderboardRoute
   '/_app/_auth/dashboard/_layout/settings': typeof AppAuthDashboardLayoutSettingsRouteWithChildren
+  '/_app/_auth/dashboard/_layout/trophy-room': typeof AppAuthDashboardLayoutTrophyRoomRoute
   '/_app/_auth/onboarding/_layout/username': typeof AppAuthOnboardingLayoutUsernameRoute
   '/_app/_auth/dashboard/_layout/': typeof AppAuthDashboardLayoutIndexRoute
   '/_app/_auth/dashboard/_layout/settings/billing': typeof AppAuthDashboardLayoutSettingsBillingRoute
@@ -161,8 +191,11 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/onboarding'
     | '/login/'
+    | '/dashboard/chat-logs'
     | '/dashboard/checkout'
+    | '/dashboard/leaderboard'
     | '/dashboard/settings'
+    | '/dashboard/trophy-room'
     | '/onboarding/username'
     | '/dashboard/'
     | '/dashboard/settings/billing'
@@ -173,7 +206,10 @@ export interface FileRouteTypes {
     | '/login'
     | '/dashboard'
     | '/onboarding'
+    | '/dashboard/chat-logs'
     | '/dashboard/checkout'
+    | '/dashboard/leaderboard'
+    | '/dashboard/trophy-room'
     | '/onboarding/username'
     | '/dashboard/settings/billing'
     | '/dashboard/settings'
@@ -189,8 +225,11 @@ export interface FileRouteTypes {
     | '/_app/_auth/onboarding'
     | '/_app/_auth/onboarding/_layout'
     | '/_app/login/_layout/'
+    | '/_app/_auth/dashboard/_layout/chat-logs'
     | '/_app/_auth/dashboard/_layout/checkout'
+    | '/_app/_auth/dashboard/_layout/leaderboard'
     | '/_app/_auth/dashboard/_layout/settings'
+    | '/_app/_auth/dashboard/_layout/trophy-room'
     | '/_app/_auth/onboarding/_layout/username'
     | '/_app/_auth/dashboard/_layout/'
     | '/_app/_auth/dashboard/_layout/settings/billing'
@@ -288,6 +327,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppAuthOnboardingLayoutUsernameRouteImport
       parentRoute: typeof AppAuthOnboardingLayoutRoute
     }
+    '/_app/_auth/dashboard/_layout/trophy-room': {
+      id: '/_app/_auth/dashboard/_layout/trophy-room'
+      path: '/trophy-room'
+      fullPath: '/dashboard/trophy-room'
+      preLoaderRoute: typeof AppAuthDashboardLayoutTrophyRoomRouteImport
+      parentRoute: typeof AppAuthDashboardLayoutRoute
+    }
     '/_app/_auth/dashboard/_layout/settings': {
       id: '/_app/_auth/dashboard/_layout/settings'
       path: '/settings'
@@ -295,11 +341,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppAuthDashboardLayoutSettingsRouteImport
       parentRoute: typeof AppAuthDashboardLayoutRoute
     }
+    '/_app/_auth/dashboard/_layout/leaderboard': {
+      id: '/_app/_auth/dashboard/_layout/leaderboard'
+      path: '/leaderboard'
+      fullPath: '/dashboard/leaderboard'
+      preLoaderRoute: typeof AppAuthDashboardLayoutLeaderboardRouteImport
+      parentRoute: typeof AppAuthDashboardLayoutRoute
+    }
     '/_app/_auth/dashboard/_layout/checkout': {
       id: '/_app/_auth/dashboard/_layout/checkout'
       path: '/checkout'
       fullPath: '/dashboard/checkout'
       preLoaderRoute: typeof AppAuthDashboardLayoutCheckoutRouteImport
+      parentRoute: typeof AppAuthDashboardLayoutRoute
+    }
+    '/_app/_auth/dashboard/_layout/chat-logs': {
+      id: '/_app/_auth/dashboard/_layout/chat-logs'
+      path: '/chat-logs'
+      fullPath: '/dashboard/chat-logs'
+      preLoaderRoute: typeof AppAuthDashboardLayoutChatLogsRouteImport
       parentRoute: typeof AppAuthDashboardLayoutRoute
     }
     '/_app/_auth/dashboard/_layout/settings/': {
@@ -338,16 +398,24 @@ const AppAuthDashboardLayoutSettingsRouteWithChildren =
   )
 
 interface AppAuthDashboardLayoutRouteChildren {
+  AppAuthDashboardLayoutChatLogsRoute: typeof AppAuthDashboardLayoutChatLogsRoute
   AppAuthDashboardLayoutCheckoutRoute: typeof AppAuthDashboardLayoutCheckoutRoute
+  AppAuthDashboardLayoutLeaderboardRoute: typeof AppAuthDashboardLayoutLeaderboardRoute
   AppAuthDashboardLayoutSettingsRoute: typeof AppAuthDashboardLayoutSettingsRouteWithChildren
+  AppAuthDashboardLayoutTrophyRoomRoute: typeof AppAuthDashboardLayoutTrophyRoomRoute
   AppAuthDashboardLayoutIndexRoute: typeof AppAuthDashboardLayoutIndexRoute
 }
 
 const AppAuthDashboardLayoutRouteChildren: AppAuthDashboardLayoutRouteChildren =
   {
+    AppAuthDashboardLayoutChatLogsRoute: AppAuthDashboardLayoutChatLogsRoute,
     AppAuthDashboardLayoutCheckoutRoute: AppAuthDashboardLayoutCheckoutRoute,
+    AppAuthDashboardLayoutLeaderboardRoute:
+      AppAuthDashboardLayoutLeaderboardRoute,
     AppAuthDashboardLayoutSettingsRoute:
       AppAuthDashboardLayoutSettingsRouteWithChildren,
+    AppAuthDashboardLayoutTrophyRoomRoute:
+      AppAuthDashboardLayoutTrophyRoomRoute,
     AppAuthDashboardLayoutIndexRoute: AppAuthDashboardLayoutIndexRoute,
   }
 

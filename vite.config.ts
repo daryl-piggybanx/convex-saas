@@ -10,6 +10,8 @@ export default defineConfig({
       "~": __dirname,
       "@": path.resolve(__dirname, "./src"),
       "@cvx": path.resolve(__dirname, "./convex"),
+      "@components": path.resolve(__dirname, "./src/components"),
+      "@lib": path.resolve(__dirname, "./src/lib"),
     },
   },
 });

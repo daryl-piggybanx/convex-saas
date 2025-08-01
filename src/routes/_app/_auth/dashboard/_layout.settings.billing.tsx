@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Switch } from "@/ui/switch";
-import { Button } from "@/ui/button";
+import { Switch } from "@components/switch";
+import { Button } from "@components/button";
 import { createFileRoute } from "@tanstack/react-router";
 import { api } from "~/convex/_generated/api";
 import { convexQuery, useConvexAction } from "@convex-dev/react-query";

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Languages } from "lucide-react";
-import { Select, SelectContent, SelectItem, SelectTrigger } from "@/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger } from "@components/select";
 import { changeLanguage } from "i18next";
 
 export function LanguageSwitcher() {

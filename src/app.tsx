@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
 import { router } from "@/router";
 import { ConvexAuthProvider } from "@convex-dev/auth/react";
-import "@/i18n";
 
 // Convex client
 const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
